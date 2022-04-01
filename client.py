@@ -52,9 +52,9 @@ def markNumber(button):
     buttonText = int(button['text'])
     markedNumberList.append(buttonText)
     if(platform.system() == 'Darwin'):
-        button.configure(state='disabled',disabledbackground='green', disabledforeground="black", highlightbackground="green")
+        button.configure(state='disabled',disabledbackground='lightgreen', disabledforeground="black", highlightbackground="lightgreen")
     else:
-        button.configure(state='disabled',background='green', foreground="black")
+        button.configure(state='disabled',background='lightgreen', foreground="black")
     winner =  all(item in flashNumberList for item in markedNumberList)
     if(winner and sorted(currentNumberList) == sorted(markedNumberList)):
         message = playerName + ' wins the game.'
